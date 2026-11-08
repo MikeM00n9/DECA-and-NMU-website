@@ -1,12 +1,15 @@
 /* ===== NMU official colors (NMU Institutional Brand Standards, p. 2) ===== */
 :root {
-  --nmu-green: #1687ea;      /* NMU Green - Pantone 343C */
-  --nmu-green-dark: #04396f; /* darker shade for gradients/footer */
+  --deca-dark-blue:#1569b3;
+  --deca-light-blue: #1687ea;
+  --nmu-green: #115740 ;     /* NMU Green - Pantone 343C */
+  --nmu-green-dark: #0b3d2c; /* darker shade for gradients/footer */
   --nmu-gold: #FFC425;       /* NMU Gold - Pantone 123C */
   --text: #1f2421;
   --muted: #5b625e;
   --bg: #ffffff;
   --bg-alt: #f3f6f4;
+  --white: #ffffff;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -27,7 +30,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: var(--nmu-green);
+  background: linear-gradient(135deg, var(--nmu-green) 0%, var(--deca-light-blue) 100%);
   border-bottom: 4px solid var(--nmu-gold);
 }
 
@@ -44,18 +47,17 @@ body {
   height: 56px;
   width: 56px;
   object-fit: contain;
-  background: #fff;
   border-radius: 50%;
   padding: 5px;
   display: block;
 }
 .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
-.brand-title { color: #fff; font-weight: 700; font-size: 1.2rem; }
+.brand-title { color: var(--white); font-weight: 700; font-size: 1.2rem; }
 .brand-sub { color: var(--nmu-gold); font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase; }
 
 .site-nav { display: flex; gap: 24px; }
 .site-nav a {
-  color: #fff;
+  color: var(--nmu-gold);
   text-decoration: none;
   font-weight: 600;
   padding: 4px 0;
@@ -67,15 +69,15 @@ body {
   display: none;
   background: none;
   border: none;
-  color: #fff;
+  color: var(--nmu-gold);
   font-size: 1.8rem;
   cursor: pointer;
 }
 
 /* ===== Hero ===== */
 .hero {
-  background: linear-gradient(135deg, var(--nmu-green) 0%, var(--nmu-green-dark) 100%);
-  color: #fff;
+  background: url("example background image.jpg") center/cover;
+  color: var(--white);
   text-align: center;
   padding: 90px 0;
 }
@@ -127,7 +129,18 @@ body {
 }
 .card h3 { color: var(--nmu-green); margin-bottom: 8px; }
 .card p { color: var(--muted); }
-.officer { text-align: center; }
+<!-- Officer_Cards_Design-->
+.officer{ text-align: center; }
+.officer-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 12px;
+  border: 3px solid var(--nmu-green);
+  margin-bottom: 12px;
+}
 
 .event-list { list-style: none; margin-top: 20px; }
 .event-list li {
@@ -143,7 +156,7 @@ a { color: var(--nmu-green); }
 
 /* ===== Footer ===== */
 .site-footer {
-  background: var(--nmu-green-dark);
+   background: linear-gradient(135deg, var(--nmu-green) 0%, var(--deca-light-blue) 100%);
   color: #cfd8d3;
   text-align: center;
   padding: 24px 0;
